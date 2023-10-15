@@ -5,9 +5,9 @@
 <a href="https://youtu.be/SrKPKVlyLfk" target="_blank"><img src="https://i.imgur.com/fZhMazb.jpg" width="420px" height="236px" /></a>
 
 ## Support
-<a href="https://discord.gg/GqCQ73fZj4" target="_blank"><img src="https://img.shields.io/discord/986844024126210078?label=Discord"/></a>
+<a href="https://discord.gg/GqCQ73fZj4" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/910872498491498536?logo=discord&label=Discord"></a>
 
-[(Documentation)](https://weponztv.gitbook.io/dojrp-samp-documentation)
+* [Documentation](https://weponztv.gitbook.io/dojrp-samp-documentation)
 
 ## Prerequisites
 * [SQLitei](https://github.com/oscar-broman/sqlitei/tree/master)
