@@ -7,7 +7,7 @@
 ## Support
 <a href="https://discord.gg/GqCQ73fZj4" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/910872498491498536?logo=discord&label=Discord"></a>
 
-[(Documentation)](https://weponztv.gitbook.io/dojrp-samp-documentation)
+* [Documentation](https://weponztv.gitbook.io/dojrp-samp-documentation)
 
 ## Prerequisites
 * [SQLitei](https://github.com/oscar-broman/sqlitei/tree/master)
