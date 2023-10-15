@@ -1315,12 +1315,6 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					LoadPlantData(playerid);
 					LoadVehicleData(playerid);
 
-					for(new i = 0; i < (MAX_VIP_VEHICLES - 1); i++)//dodgy fix? I know.. possible y_hooks bug? (do while statements do not loop in hooked callbacks)
-					{
-						SaveVehicleData(playerid);//forcing "do while" to repeat (don't ask me why it doesn't)
-						LoadVehicleData(playerid);//forcing "do while" to repeat (don't ask me why it doesn't)
-					}
-
 					LoadPlayerClan(playerid);
 
 					PlayerData[playerid][player_logged] = true;

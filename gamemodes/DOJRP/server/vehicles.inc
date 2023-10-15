@@ -43,7 +43,6 @@ enum vehicle_data
 	vehicle_paintjob,
 	vehicle_locked,
 	vehicle_fuel,
-	bool:vehicle_mods_loaded,
 	bool:vehicle_owned
 }
 new VehicleData[MAX_VEHICLES][vehicle_data];
@@ -494,6 +493,31 @@ stock LoadVehicleData(playerid)
 			health = db_get_field_assoc_float(database_result, "HEALTH");
 
 			new vehicleid = CreateVehicle(model, pos[0], pos[1], pos[2], pos[3], col1, col2, -1);
+
+			new query2[200], DBResult:mods_result;
+			format(query2, sizeof(query2), "SELECT * FROM `MODS` WHERE `VEHICLE_ID` = '%i'", vehid);
+			mods_result = db_query@(server_database, query2);
+			if(db_num_rows(mods_result))
+    		{
+				VehicleData[vehicleid][vehicle_mods][0] = db_get_field_assoc_int(mods_result, "M1");
+				VehicleData[vehicleid][vehicle_mods][1] = db_get_field_assoc_int(mods_result, "M2");
+				VehicleData[vehicleid][vehicle_mods][2] = db_get_field_assoc_int(mods_result, "M3");
+				VehicleData[vehicleid][vehicle_mods][3] = db_get_field_assoc_int(mods_result, "M4");
+				VehicleData[vehicleid][vehicle_mods][4] = db_get_field_assoc_int(mods_result, "M5");
+				VehicleData[vehicleid][vehicle_mods][5] = db_get_field_assoc_int(mods_result, "M6");
+				VehicleData[vehicleid][vehicle_mods][6] = db_get_field_assoc_int(mods_result, "M7");
+				VehicleData[vehicleid][vehicle_mods][7] = db_get_field_assoc_int(mods_result, "M8");
+				VehicleData[vehicleid][vehicle_mods][8] = db_get_field_assoc_int(mods_result, "M9");
+				VehicleData[vehicleid][vehicle_mods][9] = db_get_field_assoc_int(mods_result, "M10");
+				VehicleData[vehicleid][vehicle_mods][10] = db_get_field_assoc_int(mods_result, "M11");
+				VehicleData[vehicleid][vehicle_mods][11] = db_get_field_assoc_int(mods_result, "M12");
+				VehicleData[vehicleid][vehicle_mods][12] = db_get_field_assoc_int(mods_result, "M13");
+				VehicleData[vehicleid][vehicle_mods][13] = db_get_field_assoc_int(mods_result, "M14");
+				VehicleData[vehicleid][vehicle_mods][14] = db_get_field_assoc_int(mods_result, "M15");
+				VehicleData[vehicleid][vehicle_mods][15] = db_get_field_assoc_int(mods_result, "M16");
+				VehicleData[vehicleid][vehicle_mods][16] = db_get_field_assoc_int(mods_result, "M17");
+			}
+			db_free_result@(mods_result);
 
 			VehicleData[vehicleid][vehicle_plate] = plate;
 
@@ -1183,8 +1207,6 @@ hook OnGameModeInit()
 		VehicleData[v][vehicle_boot] = VEHICLE_PARAMS_OFF;
 		VehicleData[v][vehicle_objective] = VEHICLE_PARAMS_OFF;
 
-		VehicleData[v][vehicle_mods_loaded] = false;
-
 		for(new i = 0; i < 17; i++)
 		{
 	 		VehicleData[v][vehicle_mods][i] = 0;
@@ -1299,36 +1321,6 @@ hook OnVehicleSpawn(vehicleid)
 		SetVehicleZAngle(vehicleid, VehicleData[vehicleid][vehicle_a]);
 
 		SetVehicleParamsForAll(vehicleid, VehicleData[vehicleid][vehicle_objective], VehicleData[vehicleid][vehicle_locked]);
-
-		if(VehicleData[vehicleid][vehicle_mods_loaded] == false)
-		{
-			VehicleData[vehicleid][vehicle_mods_loaded] = true;
-
-			new query[200];
-			format(query, sizeof(query), "SELECT * FROM `MODS` WHERE `VEHICLE_ID` = '%i'", VehicleData[vehicleid][vehicle_id]);
-			database_result = db_query@(server_database, query);
-			if(db_num_rows(database_result))
-    		{
-				VehicleData[vehicleid][vehicle_mods][0] = db_get_field_assoc_int(database_result, "M1");
-				VehicleData[vehicleid][vehicle_mods][1] = db_get_field_assoc_int(database_result, "M2");
-				VehicleData[vehicleid][vehicle_mods][2] = db_get_field_assoc_int(database_result, "M3");
-				VehicleData[vehicleid][vehicle_mods][3] = db_get_field_assoc_int(database_result, "M4");
-				VehicleData[vehicleid][vehicle_mods][4] = db_get_field_assoc_int(database_result, "M5");
-				VehicleData[vehicleid][vehicle_mods][5] = db_get_field_assoc_int(database_result, "M6");
-				VehicleData[vehicleid][vehicle_mods][6] = db_get_field_assoc_int(database_result, "M7");
-				VehicleData[vehicleid][vehicle_mods][7] = db_get_field_assoc_int(database_result, "M8");
-				VehicleData[vehicleid][vehicle_mods][8] = db_get_field_assoc_int(database_result, "M9");
-				VehicleData[vehicleid][vehicle_mods][9] = db_get_field_assoc_int(database_result, "M10");
-				VehicleData[vehicleid][vehicle_mods][10] = db_get_field_assoc_int(database_result, "M11");
-				VehicleData[vehicleid][vehicle_mods][11] = db_get_field_assoc_int(database_result, "M12");
-				VehicleData[vehicleid][vehicle_mods][12] = db_get_field_assoc_int(database_result, "M13");
-				VehicleData[vehicleid][vehicle_mods][13] = db_get_field_assoc_int(database_result, "M14");
-				VehicleData[vehicleid][vehicle_mods][14] = db_get_field_assoc_int(database_result, "M15");
-				VehicleData[vehicleid][vehicle_mods][15] = db_get_field_assoc_int(database_result, "M16");
-				VehicleData[vehicleid][vehicle_mods][16] = db_get_field_assoc_int(database_result, "M17");
-			}
-			db_free_result@(database_result);
-		}
 
 		for(new i = 0; i < 17; i++)
 		{
