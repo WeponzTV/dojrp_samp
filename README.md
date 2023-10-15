@@ -5,7 +5,7 @@
 <a href="https://youtu.be/SrKPKVlyLfk" target="_blank"><img src="https://i.imgur.com/fZhMazb.jpg" width="420px" height="236px" /></a>
 
 ## Support
-<a href="https://discord.gg/GqCQ73fZj4" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/910872498491498536?logo=github&label=Discord"></a>
+<a href="https://discord.gg/GqCQ73fZj4" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/910872498491498536?logo=discord&label=Discord"></a>
 
 [(Documentation)](https://weponztv.gitbook.io/dojrp-samp-documentation)
 
