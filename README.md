@@ -3,7 +3,6 @@
 
 ## Preview
 <a href="https://youtu.be/SrKPKVlyLfk" target="_blank"><img src="https://i.imgur.com/fZhMazb.jpg" width="420px" height="236px" /></a>
-
 * [YouTube](https://youtu.be/SrKPKVlyLfk)
 
 ## Support
