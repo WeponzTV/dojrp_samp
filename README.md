@@ -24,4 +24,5 @@
 * [Nex-AC](https://github.com/NexiusTailer/Nex-AC)
 
 ## License
+> [!NOTE]
 > This script is released under a GNU General Public License v3.0 meaning you cannot sell it. If you wish to upgrade it, and re-release your version, it must be forked first and released under the same license.
