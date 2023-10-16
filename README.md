@@ -12,6 +12,9 @@
 * [Documentation](https://weponztv.gitbook.io/dojrp-samp-documentation)
 
 ## Prerequisites
+> [!IMPORTANT]  
+> Make sure you install these exact versions.
+
 * [SQLitei](https://github.com/oscar-broman/sqlitei/tree/master)
 * [BCrypt](https://github.com/Sreyas-Sreelal/samp-bcrypt/releases/tag/0.4.0)
 * [Streamer Plugin](https://github.com/samp-incognito/samp-streamer-plugin/releases/tag/v2.9.6)
