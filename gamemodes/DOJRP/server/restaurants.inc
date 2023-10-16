@@ -118,7 +118,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 						GivePlayerMoney(playerid, -7);
 
-						return ShowBurgerDialog(playerid);
+						return ShowPizzaDialog(playerid);
 					}
 					case 1://Sprunk: $1
 					{
@@ -145,7 +145,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 						GivePlayerMoney(playerid, -1);
 
-						return ShowBurgerDialog(playerid);
+						return ShowPizzaDialog(playerid);
 					}
 				}
 			}
@@ -182,7 +182,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 						GivePlayerMoney(playerid, -3);
 
-						return ShowBurgerDialog(playerid);
+						return ShowCluckDialog(playerid);
 					}
 					case 1://Sprunk: $1
 					{
@@ -209,7 +209,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 						GivePlayerMoney(playerid, -1);
 
-						return ShowBurgerDialog(playerid);
+						return ShowCluckDialog(playerid);
 					}
 				}
 			}
