@@ -323,6 +323,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				if(!IsPlayerConnected(targetid)) return SendClientMessage(playerid, RED, "ERROR: That player is not connected.");
 				if(IsPlayerNPC(targetid)) return SendClientMessage(playerid, RED, "ERROR: That player is an NPC.");
 				if(!IsPlayerLogged(targetid)) return SendClientMessage(playerid, RED, "ERROR: That player is not logged in.");
+				if(targetid == playerid) return SendClientMessage(playerid, RED, "ERROR: You cannot transfer money to yourself.");
 				
 				AccountData[playerid][account_sendto] = targetid;
 
