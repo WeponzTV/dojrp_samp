@@ -8,9 +8,13 @@
 ## Support
 <a href="https://discord.gg/GqCQ73fZj4" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/910872498491498536?logo=discord&label=Discord"></a>
 
+* [Discord](https://discord.gg/GqCQ73fZj4)
 * [Documentation](https://weponztv.gitbook.io/dojrp-samp-documentation)
 
 ## Prerequisites
+> [!IMPORTANT]  
+> Make sure you install these exact versions.
+
 * [SQLitei](https://github.com/oscar-broman/sqlitei/tree/master)
 * [BCrypt](https://github.com/Sreyas-Sreelal/samp-bcrypt/releases/tag/0.4.0)
 * [Streamer Plugin](https://github.com/samp-incognito/samp-streamer-plugin/releases/tag/v2.9.6)
@@ -20,4 +24,5 @@
 * [Nex-AC](https://github.com/NexiusTailer/Nex-AC)
 
 ## License
+> [!WARNING]
 > This script is released under a GNU General Public License v3.0 meaning you cannot sell it. If you wish to upgrade it, and re-release your version, it must be forked first and released under the same license.
